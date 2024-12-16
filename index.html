@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaCal - Calculadora Calórica</title>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="#" class="logo">M<span>et</span>a C<span>a</span>l</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#about">Sobre</a></li>
+                <li class="nav-item"><a href="#calculator">Calculadora</a></li>
+                <li class="nav-item"><a href="#contact">Contato</a></li>
+                <i class='bx bx-search'></i>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Home -->
+        <section id="home" class="home">
+            <div class="home-text">
+                <h4>Bem-vindo à MetaCal</h4>
+                <h1>Conquiste seus Objetivos</h1>
+                <p>A MetaCal ajuda você a calcular suas necessidades calóricas de forma prática e precisa,
+                 ideal para atingir suas metas de saúde e bem-estar.</p>
+                <a href="#calculator" class="btn-primary">Comece Agora</a>
+            </div>
+            <div class="home-img">
+                <img src="img.png (1) (1) (1).png" alt="Imagem de uma calculadora" />
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="about" class="about">
+            <h2>Sobre a MetaCal</h2>
+            <p>Na MetaCal, acreditamos que alcançar seus objetivos de saúde e bem-estar deve ser simples. Nossa ferramenta calcula suas necessidades calóricas de forma eficiente e intuitiva, ajudando você a planejar sua jornada de maneira saudável e equilibrada.</p>
+        </section>
+
+        <!-- Seção Calculadora -->
+        <section id="calculator" class="calculator">
+            <div class="container">
+                <h2>Calculadora Calórica</h2>
+                <form id="calorie-form">
+                    <div class="form-group">
+                        <label for="age">Idade (anos):</label>
+                        <input type="number" id="age" placeholder="Ex: 25" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Peso (kg):</label>
+                        <input type="number" id="weight" placeholder="Ex: 70" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="height">Altura (cm):</label>
+                        <input type="number" id="height" placeholder="Ex: 170" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gênero:</label>
+                        <select id="gender" required>
+                            <option value="male">Masculino</option>
+                            <option value="female">Feminino</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="activity">Nível de atividade:</label>
+                        <select id="activity" required>
+                            <option value="1.2">Sedentário</option>
+                            <option value="1.375">Leve</option>
+                            <option value="1.55">Moderado</option>
+                            <option value="1.725">Intenso</option>
+                            <option value="1.9">Muito Intenso</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="goal">Objetivo:</label>
+                        <select id="goal" required>
+                            <option value="-500">Perder peso</option>
+                            <option value="0">Manter peso</option>
+                            <option value="500">Ganhar peso</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-secondary">Calcular</button>
+                </form>
+                <div id="result" class="hidden">
+                    <h3>Calorias Diárias Recomendadas</h3>
+                    <p id="calories"></p>
+                    <h3>Sugestões de Alimentos:</h3>
+                    <ul id="food-suggestions"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contact" class="contact">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco pelo e-mail <a href="mailto:suporte@metacal.com">suporte@metacal.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MetaCal. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
